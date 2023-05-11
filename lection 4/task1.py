@@ -5,7 +5,14 @@
 # Например 1, 1, 1 --> "Равносторонний"
 
 def which_triangle(a, b, c):
-    # Здесь нужно написать код
+    if a + b <= c or a + c <= b or b + c <= a:
+        return test_data[4]
+    elif a == b and a == c:
+        return test_data[0]
+    elif a == b or a == c or b == c:
+        return test_data[1]
+    else:
+        return test_data[2]
     return type_triangle
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
@@ -15,7 +22,7 @@ data = [
     (3, 3, 3),
     (1, 2, 2),
     (3, 4, 5),
-    (1, 2, 1),
+    (3, 2, 3),
     (1, 2, 3)
 ]
 
